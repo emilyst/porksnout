@@ -1,0 +1,57 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-thread_safety
+
+AllCops:
+  ExtraDetails: true
+  TargetRubyVersion: 3.2
+  NewCops: enable
+  Exclude:
+    - ".git/**/*"
+    - "app/views/**/*"
+    - "bin/**/*"
+    - "config/environments/*"
+    - "db/**/*"
+    - "generated/**/*.rb"
+    - "log/**/*"
+    - "node_modules/**/*"
+    - "script/**/*"
+    - "spec/fixtures/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+
+Layout/EmptyLines: { Enabled: false }
+Layout/HashAlignment: { EnforcedHashRocketStyle: key, EnforcedColonStyle: key }
+Layout/LineLength: { Enabled: false }
+Layout/MultilineMethodCallIndentation: { Enabled: true, EnforcedStyle: indented }
+Layout/ParameterAlignment: { Enabled: true, EnforcedStyle: with_first_parameter }
+Layout/SpaceInsideHashLiteralBraces: { Enabled: true, EnforcedStyle: compact }
+Layout/TrailingEmptyLines: { Enabled: true }
+Lint/EmptyBlock: { Enabled: false }
+Lint/EmptyClass: { Enabled: false }
+Lint/EmptyEnsure: { Enabled: false }
+Lint/EmptyExpression: { Enabled: false }
+Lint/EmptyFile: { Enabled: false }
+Lint/EmptyInPattern: { Enabled: false }
+Lint/EmptyInterpolation: { Enabled: false }
+Lint/EmptyWhen: { Enabled: false }
+Lint/UnusedMethodArgument: { Enabled: true, AutoCorrect: false }
+Lint/UselessAssignment: { Enabled: false }
+Metrics: { Enabled: false }
+RSpec/ContextWording: { Enabled: true, Prefixes: ["with", "without", "when", "and", "for", "unless", "if"] }
+RSpec/DescribeClass: { Enabled: true, Exclude: ["lib/**/*", "spec/tasks/**/*"] }
+RSpec/ExampleLength: { Enabled: false }
+RSpec/FilePath: { Enabled: false }
+RSpec/MultipleMemoizedHelpers: { Enabled: false }
+RSpec/NamedSubject: { Enabled: false }
+RSpec/NestedGroups: { Enabled: false }
+Style/Documentation: { Enabled: false }
+Style/FrozenStringLiteralComment: { Enabled: true, EnforcedStyle: always_true, AutoCorrect: true }
+Style/RescueModifier: { Enabled: false }
+Style/StringLiterals: { Enabled: true, EnforcedStyle: double_quotes }
+Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: comma }
+Style/TrailingCommaInArrayLiteral: { EnforcedStyleForMultiline: comma }
+Style/TrailingCommaInHashLiteral: { EnforcedStyleForMultiline: comma }
